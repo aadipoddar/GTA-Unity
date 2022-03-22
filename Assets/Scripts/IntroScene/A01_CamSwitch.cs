@@ -6,6 +6,7 @@ public class A01_CamSwitch : MonoBehaviour
 {
     public GameObject firstCam;
     public GameObject secondCam;
+    public GameObject thirdCam;
     public GameObject credLeadDes;
     public GameObject credStory;
 
@@ -22,5 +23,8 @@ public class A01_CamSwitch : MonoBehaviour
         credStory.SetActive(true);
         secondCam.SetActive(true);
         firstCam.SetActive(false);
+        yield return new WaitForSeconds(5);
+        thirdCam.SetActive(true);
+        secondCam.SetActive(false);
     }
 }
