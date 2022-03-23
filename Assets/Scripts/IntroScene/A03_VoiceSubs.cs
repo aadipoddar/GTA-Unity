@@ -21,6 +21,8 @@ public class A03_VoiceSubs : MonoBehaviour
     public GameObject theGun;
     public GameObject thirdCam;
     public GameObject fourCam;
+    public GameObject fadeIn;
+    public GameObject fadeOut;
 
     void Start()
     {
@@ -62,12 +64,17 @@ public class A03_VoiceSubs : MonoBehaviour
         subText.GetComponent<Text>().text = "My name is Steve Lorenzo";
         voiceLine05.Play();
         yield return new WaitForSeconds(2);
+        fadeIn.SetActive(false);
+        fadeIn.SetActive(true);
         fullBack.SetActive(false);
         thirdCam.SetActive(false);
         fourCam.SetActive(true);
         subText.GetComponent<Text>().text = "Three years ago Jimmy Horseface tries to have me whacked. Set me up.";
         yield return new WaitForSeconds(5);
         subText.GetComponent<Text>().text = "Now it's time for me to return that favour.";
-
+        yield return new WaitForSeconds(3);
+        subText.GetComponent<Text>().text = "";
+        yield return new WaitForSeconds(2);
+        fadeOut.SetActive(true);
     }
 }
