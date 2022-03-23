@@ -19,6 +19,7 @@ public class A03_VoiceSubs : MonoBehaviour
     public GameObject theCop;
     public GameObject theChar;
     public GameObject theGun;
+    public GameObject thirdCam;
     public GameObject fourCam;
 
     void Start()
@@ -62,6 +63,7 @@ public class A03_VoiceSubs : MonoBehaviour
         voiceLine05.Play();
         yield return new WaitForSeconds(2);
         fullBack.SetActive(false);
+        thirdCam.SetActive(false);
         fourCam.SetActive(true);
         subText.GetComponent<Text>().text = "Three years ago Jimmy Horseface tries to have me whacked. Set me up.";
         yield return new WaitForSeconds(5);
