@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class A03_VoiceSubs : MonoBehaviour
 {
@@ -76,5 +77,7 @@ public class A03_VoiceSubs : MonoBehaviour
         subText.GetComponent<Text>().text = "";
         yield return new WaitForSeconds(2);
         fadeOut.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(1);
     }
 }
