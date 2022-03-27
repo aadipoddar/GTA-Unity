@@ -7,6 +7,11 @@ public class FiringPistol : MonoBehaviour
     public bool isAiming = false;
     public static bool isFiring = false;
 
+    public static float distanceFromTarget;
+    public float toTarget;
+
+    public int shotDamage;
+
     public GameObject thePlayer;
     public GameObject aimingObject;
 
@@ -14,6 +19,7 @@ public class FiringPistol : MonoBehaviour
 
     void Update()
     {
+        RaycastHit Hit;
         if (Input.GetMouseButton(1))
         {
             isAiming = true;
@@ -31,6 +37,14 @@ public class FiringPistol : MonoBehaviour
 
         if (isAiming == true && Input.GetMouseButtonDown(0))
         {
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Hit))
+            {
+                toTarget = Hit.distance;
+                distanceFromTarget = toTarget;
+                shotDamage = 20;
+                Hit.transform.SendMessage("HurtNPC", shotDamage, SendMessageOptions.DontRequireReceiver);
+            }
+
             isFiring = true;
             pistolShot.Play();
             thePlayer.GetComponent<Animation>().Play("Fire_1Pistol");
