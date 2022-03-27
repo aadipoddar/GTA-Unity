@@ -11,6 +11,7 @@ public class NPCAlert : MonoBehaviour
         {
             npc.gameObject.GetComponent<Animator>().Play("Running");
             npc.GetComponent<NavMeshAgent>().speed = 7.5f;
+            NPCAI.fleeMode = true;
         }
     }
 }
