@@ -34,5 +34,7 @@ public class AA_Opening : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         fadeIn.SetActive(true);
         fadeIn.GetComponent<Animator>().Play("FadeInAnim");
+        yield return new WaitForSeconds(4);
+        GlobalHint.hintNumber = 1;
     }
 }
