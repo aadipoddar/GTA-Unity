@@ -8,6 +8,8 @@ public class M001 : MonoBehaviour
     public GameObject missionStartPoint;
     public GameObject ourPhone;
     public GameObject sentMessage;
+    public GameObject tonnyB;
+
     public AudioSource phoneFx;
 
     void OnTriggerEnter(Collider other)
@@ -21,6 +23,7 @@ public class M001 : MonoBehaviour
         miniMapLoc.SetActive(false);
         ourPhone.SetActive(true);
         phoneFx.Play();
+        tonnyB.SetActive(true);
         yield return new WaitForSeconds(3);
         sentMessage.SetActive(true);
         yield return new WaitForSeconds(2);

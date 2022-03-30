@@ -10,6 +10,10 @@ public class AA_Opening : MonoBehaviour
     public GameObject fadeOut;
     public GameObject thePlayer;
     public GameObject killerFake;
+    public GameObject cashCount;
+    public GameObject ammoCount;
+    public GameObject hintBox;
+    public GameObject miniMap;
 
     void Start()
     {
@@ -18,23 +22,43 @@ public class AA_Opening : MonoBehaviour
 
     IEnumerator OpenBegin()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         yield return new WaitForSeconds(1);
+
         theText.SetActive(true);
+
         yield return new WaitForSeconds(7);
+
         fadeIn.GetComponent<Animator>().enabled = true;
         initialCamera.GetComponent<Animator>().enabled = true;
+
         yield return new WaitForSeconds(3);
+
         fadeOut.SetActive(true);
         fadeIn.SetActive(false);
+
         yield return new WaitForSeconds(2.5f);
+
         killerFake.SetActive(false);
         thePlayer.SetActive(true);
         initialCamera.SetActive(false);
-        fadeOut.SetActive(false);
+
         yield return new WaitForSeconds(0.5f);
+
+        fadeOut.SetActive(false);
         fadeIn.SetActive(true);
+
+        cashCount.SetActive(true);
+        ammoCount.SetActive(true);
+        hintBox.SetActive(true);
+        miniMap.SetActive(true);
+
         fadeIn.GetComponent<Animator>().Play("FadeInAnim");
+
         yield return new WaitForSeconds(4);
+
         GlobalHint.hintNumber = 1;
     }
 }
