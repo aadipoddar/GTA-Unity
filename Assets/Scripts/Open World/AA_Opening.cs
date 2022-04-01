@@ -61,5 +61,8 @@ public class AA_Opening : MonoBehaviour
         fadeIn.SetActive(false);
 
         GlobalHint.hintNumber = 1;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
