@@ -30,6 +30,9 @@ public class NPCDeath : MonoBehaviour
 
     IEnumerator EndNPC()
     {
+        GlobalWanted.wantedLevel += 1;
+        GlobalWanted.activateStar = true;
+        
         npcObject.GetComponent<NPCAI>().enabled = false;
         npcObject.GetComponent<NavMeshAgent>().enabled = false;
         npcObject.GetComponent<BoxCollider>().enabled = false;

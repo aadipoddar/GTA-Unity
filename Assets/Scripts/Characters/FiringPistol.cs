@@ -37,18 +37,22 @@ public class FiringPistol : MonoBehaviour
 
         if (isAiming == true && Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Hit))
+            if(GlobalAmmo.pistolShots > 0)
             {
-                toTarget = Hit.distance;
-                distanceFromTarget = toTarget;
-                shotDamage = 20;
-                Hit.transform.SendMessage("HurtNPC", shotDamage, SendMessageOptions.DontRequireReceiver);
-            }
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Hit))
+                {
+                    toTarget = Hit.distance;
+                    distanceFromTarget = toTarget;
+                    shotDamage = 20;
+                    Hit.transform.SendMessage("HurtNPC", shotDamage, SendMessageOptions.DontRequireReceiver);
+                }
 
-            isFiring = true;
-            pistolShot.Play();
-            thePlayer.GetComponent<Animation>().Play("Fire_1Pistol");
-            StartCoroutine(FireThePistol());
+                isFiring = true;
+                pistolShot.Play();
+                GlobalAmmo.pistolShots -= 1;
+                thePlayer.GetComponent<Animation>().Play("Fire_1Pistol");
+                StartCoroutine(FireThePistol());
+            }
         }
     }
 
