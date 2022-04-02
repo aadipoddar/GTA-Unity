@@ -1,0 +1,28 @@
+{
+  "4b82367daa84f7e4f8f1ba545188e569": {
+    "sceneGuid": "bff90fe789b1fac498515726f7274879",
+    "uniqueCameraId": "4b82367daa84f7e4f8f1ba545188e569",
+    "name": "Canvas",
+    "pointX": 360.370819,
+    "pointY": 257.749084,
+    "pointZ": 264.314941,
+    "directionX": 0.0198052116,
+    "directionY": -0.0102457916,
+    "directionZ": 0.0007647229,
+    "directionW": 0.999897838,
+    "zoom": 400.0
+  },
+  "3c31cf76f29d9744284e7a812cc274ce": {
+    "sceneGuid": "bff90fe789b1fac498515726f7274879",
+    "uniqueCameraId": "3c31cf76f29d9744284e7a812cc274ce",
+    "name": "Player",
+    "pointX": 190.152527,
+    "pointY": 14.6412573,
+    "pointZ": 205.512863,
+    "directionX": 0.11477901,
+    "directionY": -0.5318951,
+    "directionZ": 0.07370301,
+    "directionW": 0.835927367,
+    "zoom": 5.24864531
+  }
+}

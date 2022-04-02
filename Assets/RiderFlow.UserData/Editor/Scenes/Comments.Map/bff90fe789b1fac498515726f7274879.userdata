@@ -1,0 +1,26 @@
+{
+  "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-100096-831301606": {
+    "GameObjectId": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-100096-831301606",
+    "CommentText": "Main Player",
+    "AssetGUID": "bff90fe789b1fac498515726f7274879",
+    "UniqueItemID": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-100096-831301606"
+  },
+  "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-434960533-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-434960533-0",
+    "CommentText": "All the Components of NPC2",
+    "AssetGUID": "bff90fe789b1fac498515726f7274879",
+    "UniqueItemID": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-434960533-0"
+  },
+  "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-2135546823-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-2135546823-0",
+    "CommentText": "All the City Elements",
+    "AssetGUID": "bff90fe789b1fac498515726f7274879",
+    "UniqueItemID": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-2135546823-0"
+  },
+  "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-888418263-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-888418263-0",
+    "CommentText": "All Chracters Including NPCs",
+    "AssetGUID": "bff90fe789b1fac498515726f7274879",
+    "UniqueItemID": "GlobalObjectId_V1-2-bff90fe789b1fac498515726f7274879-888418263-0"
+  }
+}
