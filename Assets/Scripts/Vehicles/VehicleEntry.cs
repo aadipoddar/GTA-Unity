@@ -41,6 +41,8 @@ public class VehicleEntry : MonoBehaviour
                 interactText.GetComponent<Text>().text = "";
                 interactUI.SetActive(false);
 
+                GlobalHint.hintNumber = 2;
+
                 StartCoroutine(ExitTrigger());
             }
         }

@@ -22,11 +22,13 @@ public class VehicleExit : MonoBehaviour
             liveVehicle.GetComponent<CarUserControl>().enabled = false;
             liveVehicle.GetComponent<CarAudio>().enabled = false;
 
+            thePlayer.transform.parent = null;
+
             miniMapCam.transform.parent = thePlayer.transform;
             miniMapCam.transform.localEulerAngles = new Vector3(90, 0, 0);
             miniMapCam.transform.localPosition = new Vector3(0, 25, 0);
 
-            thePlayer.transform.parent = null;
+            CharControl.isStepping = false;
 
             StartCoroutine(EnterAgain());
         }

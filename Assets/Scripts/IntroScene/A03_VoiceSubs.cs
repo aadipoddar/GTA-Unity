@@ -70,7 +70,7 @@ public class A03_VoiceSubs : MonoBehaviour
         fullBack.SetActive(false);
         thirdCam.SetActive(false);
         fourCam.SetActive(true);
-        subText.GetComponent<Text>().text = "Three years ago Jimmy Horseface tries to have me whacked. Set me up.";
+        subText.GetComponent<Text>().text = "Three years ago Jimmy Horseface tried to have me whacked. Set me up.";
         yield return new WaitForSeconds(5);
         subText.GetComponent<Text>().text = "Now it's time for me to return that favour.";
         yield return new WaitForSeconds(3);

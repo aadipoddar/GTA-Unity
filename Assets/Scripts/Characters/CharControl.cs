@@ -10,7 +10,7 @@ public class CharControl : MonoBehaviour
     public AudioSource footStep2;
 
     public bool isRunning;
-    public bool isStepping = false;
+    public static bool isStepping = false;
 
     public float horizontalMove;
     public float verticalMove;
