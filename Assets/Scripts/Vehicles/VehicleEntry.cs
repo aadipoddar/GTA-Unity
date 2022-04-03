@@ -13,6 +13,7 @@ public class VehicleEntry : MonoBehaviour
     public GameObject miniMapCam;
     public GameObject interactUI;
     public GameObject interactText;
+    public GameObject playerPoint;
     public bool canEnter = false;
 
     void Update()
@@ -25,6 +26,7 @@ public class VehicleEntry : MonoBehaviour
 
                 vehicleCam.SetActive(true);
                 thePlayer.SetActive(false);
+                playerPoint.SetActive(true);
 
                 liveVehicle.GetComponent<CarController>().enabled = true;
                 liveVehicle.GetComponent<CarUserControl>().enabled = true;

@@ -10,6 +10,7 @@ public class VehicleExit : MonoBehaviour
     public GameObject liveVehicle;
     public GameObject entryTrig;
     public GameObject miniMapCam;
+    public GameObject playerPoint;
 
     void Update()
     {
@@ -17,6 +18,7 @@ public class VehicleExit : MonoBehaviour
         {
             thePlayer.SetActive(true);
             vehicleCam.SetActive(false);
+            playerPoint.SetActive(false);
 
             liveVehicle.GetComponent<CarController>().enabled = false;
             liveVehicle.GetComponent<CarUserControl>().enabled = false;
